@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artificial Intelligence</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1> Artificial Intelligence</h1>
+
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800"
+alt="Artificial Intelligence" width="700" height="400">
+
+<div class="card">
+<h2>About AI</h2>
+
+<p id="aboutText">
+Artificial Intelligence (AI) is a branch of computer science that enables machines to think, learn, and solve problems like humans.
+</p>
+
+<button onclick="changeText()">Change Text</button>
+
+</div>
+<div class="card">
+<h2>Applications of AI</h2>
+<ul>
+<li>Healthcare</li>
+<li>Education</li>
+<li>Robotics</li>
+<li>Cyber Security</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Popular AI Tools</h2>
+<ol>
+<li>ChatGPT</li>
+<li>Google Gemini</li>
+<li>Claude AI</li>
+</ol>
+</div>
+
+<h2>Popular AI Tools Table</h2>
+
+<table>
+
+<tr>
+<th>Tool</th>
+<th>Company</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>ChatGPT</td>
+<td>OpenAI</td>
+<td>Chat Assistant</td>
+</tr>
+
+<tr>
+<td>Gemini</td>
+<td>Google</td>
+<td>AI Assistant</td>
+</tr>
+
+<tr>
+<td>Claude</td>
+<td>Anthropic</td>
+<td>Writing & Coding</td>
+</tr>
+
+<tr>
+<td>GitHub Copilot</td>
+<td>GitHub</td>
+<td>Code Completion</td>
+</tr>
+
+</table>
+
+<h2>Inline CSS Example</h2>
+
+<p style="color:red;font-size:24px;font-weight:bold;text-align:center;">
+AI is shaping the future of our world!
+</p>
+
+<br>
+
+<a class="button" href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank">
+Learn More About AI
+</a>
+<br><br>
+<button onclick="showAlert()">Show Alert</button>
+
+</div>
+<script>
+
+function showAlert(){
+    alert("Welcome to the Artificial Intelligence Website!");
+}
+
+function changeText(){
+
+document.getElementById("aboutText").innerHTML =
+"JavaScript has successfully changed this text using the DOM! AI is making our future smarter.";
+
+}
+
+</script>
+
+</body>
+</html>
