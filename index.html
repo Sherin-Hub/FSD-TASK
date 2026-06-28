@@ -13,12 +13,14 @@
 
 <div class="container">
 
-<h1> Artificial Intelligence</h1>
+<h1>Artificial Intelligence</h1>
 
 <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800"
 alt="Artificial Intelligence" width="700" height="400">
 
+<!-- About -->
 <div class="card">
+
 <h2>About AI</h2>
 
 <p id="aboutText">
@@ -28,24 +30,36 @@ Artificial Intelligence (AI) is a branch of computer science that enables machin
 <button onclick="changeText()">Change Text</button>
 
 </div>
+
+<!-- Applications -->
 <div class="card">
+
 <h2>Applications of AI</h2>
+
 <ul>
 <li>Healthcare</li>
 <li>Education</li>
 <li>Robotics</li>
 <li>Cyber Security</li>
 </ul>
+
 </div>
 
+<!-- AI Tools -->
 <div class="card">
+
 <h2>Popular AI Tools</h2>
+
 <ol>
 <li>ChatGPT</li>
 <li>Google Gemini</li>
 <li>Claude AI</li>
 </ol>
+
 </div>
+
+<!-- Table -->
+<div class="card">
 
 <h2>Popular AI Tools Table</h2>
 
@@ -64,7 +78,7 @@ Artificial Intelligence (AI) is a branch of computer science that enables machin
 </tr>
 
 <tr>
-<td>Gemini</td>
+<td>Google Gemini</td>
 <td>Google</td>
 <td>AI Assistant</td>
 </tr>
@@ -83,31 +97,130 @@ Artificial Intelligence (AI) is a branch of computer science that enables machin
 
 </table>
 
+</div>
+
+<!-- Inline CSS -->
+<div class="card">
+
 <h2>Inline CSS Example</h2>
 
 <p style="color:red;font-size:24px;font-weight:bold;text-align:center;">
 AI is shaping the future of our world!
 </p>
 
-<br>
+</div>
 
-<a class="button" href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank">
+<!-- Hyperlink -->
+<a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank">
 Learn More About AI
 </a>
+
 <br><br>
+
+<!-- Alert Button -->
 <button onclick="showAlert()">Show Alert</button>
 
-</div>
+
+<div class="card">
+
+<h2>Share Your Learning Experience</h2>
+
+<p>
+We hope you enjoyed learning about Artificial Intelligence. Please share your learning experience and feedback below.
+</p>
+
+<form onsubmit="return validateForm();">
+
+<label>Your Name</label><br>
+<input type="text" id="name" placeholder="Enter your name"><br><br>
+
+<label>Email Address</label><br>
+<input type="email" id="email" placeholder="Enter your email"><br><br>
+
+<label>What did you learn about AI today?</label><br>
+<textarea id="feedback" rows="5" placeholder="Write your learning experience here..."></textarea><br><br>
+
+<label>Rate this Learning Page:</label><br>
+
+<input type="radio" name="rating" value="Excellent"> Excellent
+<input type="radio" name="rating" value="Good"> Good
+<input type="radio" name="rating" value="Average"> Average
+
+<br><br>
+
+<button type="submit">Submit Feedback</button>
+
+</form>
+
+<p id="message"></p>
+
+</div> <!-- Feedback Card -->
+
+</div> <!-- Container -->
+
 <script>
 
 function showAlert(){
-    alert("Welcome to the Artificial Intelligence Website!");
+
+alert("Welcome to the Artificial Intelligence Website!");
+
 }
 
 function changeText(){
 
 document.getElementById("aboutText").innerHTML =
-"JavaScript has successfully changed this text using the DOM! AI is making our future smarter.";
+"JavaScript successfully changed this text using the DOM. AI is transforming the future with smart technology.";
+
+}
+
+function validateForm(){
+
+let name = document.getElementById("name").value.trim();
+let email = document.getElementById("email").value.trim();
+let feedback = document.getElementById("feedback").value.trim();
+
+let rating = document.querySelector('input[name="rating"]:checked');
+
+let message = document.getElementById("message");
+
+if(name==""){
+    message.style.color="red";
+    message.innerHTML="Please enter your name.";
+    return false;
+}
+
+if(email==""){
+    message.style.color="red";
+    message.innerHTML="Please enter your email.";
+    return false;
+}
+
+if(feedback==""){
+    message.style.color="red";
+    message.innerHTML="Please share what you learned.";
+    return false;
+}
+
+if(rating==null){
+    message.style.color="red";
+    message.innerHTML="Please rate this learning page.";
+    return false;
+}
+
+message.style.color="green";
+message.innerHTML="✅ Thank you for your valuable feedback! We are happy that you learned about Artificial Intelligence.";
+
+document.getElementById("name").value="";
+document.getElementById("email").value="";
+document.getElementById("feedback").value="";
+
+let ratings=document.getElementsByName("rating");
+
+for(let i=0;i<ratings.length;i++){
+    ratings[i].checked=false;
+}
+
+return false;
 
 }
 
